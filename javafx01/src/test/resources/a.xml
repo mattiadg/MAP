@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"
+	xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+	xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+	<p:cSld>
+		<p:spTree>
+			<p:nvGrpSpPr>
+				<p:cNvPr id="1" name="" />
+				<p:cNvGrpSpPr />
+				<p:nvPr />
+			</p:nvGrpSpPr>
+			<p:grpSpPr>
+				<a:xfrm>
+					<a:off x="0" y="0" />
+					<a:ext cx="0" cy="0" />
+					<a:chOff x="0" y="0" />
+					<a:chExt cx="0" cy="0" />
+				</a:xfrm>
+			</p:grpSpPr>
+			<p:sp>
+				<p:nvSpPr>
+					<p:cNvPr id="91138" name="Text Box 1" />
+					<p:cNvSpPr txBox="1">
+						<a:spLocks noChangeArrowheads="1" />
+					</p:cNvSpPr>
+					<p:nvPr />
+				</p:nvSpPr>
+				<p:spPr bwMode="auto">
+					<a:xfrm>
+						<a:off x="1835150" y="6237288" />
+						<a:ext cx="3671888" cy="550862" />
+					</a:xfrm>
+					<a:prstGeom prst="rect">
+						<a:avLst />
+					</a:prstGeom>
+					<a:noFill />
+					<a:ln w="9525">
+						<a:noFill />
+						<a:round />
+						<a:headEnd />
+						<a:tailEnd />
+					</a:ln>
+				</p:spPr>
+				<p:txBody>
+					<a:bodyPr lIns="90000" tIns="46800" rIns="90000" bIns="46800">
+						<a:spAutoFit />
+					</a:bodyPr>
+					<a:lstStyle />
+					<a:p>
+						<a:pPr>
+							<a:lnSpc>
+								<a:spcPct val="100000" />
+							</a:lnSpc>
+							<a:spcBef>
+								<a:spcPct val="0" />
+							</a:spcBef>
+							<a:buFont typeface="Verdana" pitchFamily="32" charset="0" />
+							<a:buNone />
+							<a:tabLst>
+								<a:tab pos="0" algn="l" />
+								<a:tab pos="447675" algn="l" />
+								<a:tab pos="896938" algn="l" />
+								<a:tab pos="1346200" algn="l" />
+								<a:tab pos="1795463" algn="l" />
+								<a:tab pos="2244725" algn="l" />
+								<a:tab pos="2693988" algn="l" />
+								<a:tab pos="3143250" algn="l" />
+								<a:tab pos="3592513" algn="l" />
+								<a:tab pos="4041775" algn="l" />
+								<a:tab pos="4491038" algn="l" />
+								<a:tab pos="4940300" algn="l" />
+								<a:tab pos="5389563" algn="l" />
+								<a:tab pos="5838825" algn="l" />
+								<a:tab pos="6288088" algn="l" />
+								<a:tab pos="6737350" algn="l" />
+								<a:tab pos="7186613" algn="l" />
+								<a:tab pos="7635875" algn="l" />
+								<a:tab pos="8085138" algn="l" />
+								<a:tab pos="8534400" algn="l" />
+								<a:tab pos="8983663" algn="l" />
+							</a:tabLst>
+						</a:pPr>
+						<a:r>
+							<a:rPr lang="en-GB" sz="1000" b="1">
+								<a:solidFill>
+									<a:srgbClr val="000000" />
+								</a:solidFill>
+								<a:latin typeface="Verdana" pitchFamily="32" charset="0" />
+							</a:rPr>
+							<a:t>Linguaggi di programmazione</a:t>
+						</a:r>
+					</a:p>
+					<a:p>
+						<a:pPr>
+							<a:lnSpc>
+								<a:spcPct val="100000" />
+							</a:lnSpc>
+							<a:spcBef>
+								<a:spcPct val="0" />
+							</a:spcBef>
+							<a:buFont typeface="Verdana" pitchFamily="32" charset="0" />
+							<a:buNone />
+							<a:tabLst>
+								<a:tab pos="0" algn="l" />
+								<a:tab pos="447675" algn="l" />
+								<a:tab pos="896938" algn="l" />
+								<a:tab pos="1346200" algn="l" />
+								<a:tab pos="1795463" algn="l" />
+								<a:tab pos="2244725" algn="l" />
+								<a:tab pos="2693988" algn="l" />
+								<a:tab pos="3143250" algn="l" />
+								<a:tab pos="3592513" algn="l" />
+								<a:tab pos="4041775" algn="l" />
+								<a:tab pos="4491038" algn="l" />
+								<a:tab pos="4940300" algn="l" />
+								<a:tab pos="5389563" algn="l" />
+								<a:tab pos="5838825" algn="l" />
+								<a:tab pos="6288088" algn="l" />
+								<a:tab pos="6737350" algn="l" />
+								<a:tab pos="7186613" algn="l" />
+								<a:tab pos="7635875" algn="l" />
+								<a:tab pos="8085138" algn="l" />
+								<a:tab pos="8534400" algn="l" />
+								<a:tab pos="8983663" algn="l" />
+							</a:tabLst>
+						</a:pPr>
+						<a:endParaRPr lang="en-GB" sz="1000" b="1">
+							<a:solidFill>
+								<a:srgbClr val="000000" />
+							</a:solidFill>
+							<a:latin typeface="Verdana" pitchFamily="32" charset="0" />
+						</a:endParaRPr>
+					</a:p>
+					<a:p>
+						<a:pPr>
+							<a:lnSpc>
+								<a:spcPct val="100000" />
+							</a:lnSpc>
+							<a:spcBef>
+								<a:spcPct val="0" />
+							</a:spcBef>
+							<a:buFont typeface="Verdana" pitchFamily="32" charset="0" />
+							<a:buNone />
+							<a:tabLst>
+								<a:tab pos="0" algn="l" />
+								<a:tab pos="447675" algn="l" />
+								<a:tab pos="896938" algn="l" />
+								<a:tab pos="1346200" algn="l" />
+								<a:tab pos="1795463" algn="l" />
+								<a:tab pos="2244725" algn="l" />
+								<a:tab pos="2693988" algn="l" />
+								<a:tab pos="3143250" algn="l" />
+								<a:tab pos="3592513" algn="l" />
+								<a:tab pos="4041775" algn="l" />
+								<a:tab pos="4491038" algn="l" />
+								<a:tab pos="4940300" algn="l" />
+								<a:tab pos="5389563" algn="l" />
+								<a:tab pos="5838825" algn="l" />
+								<a:tab pos="6288088" algn="l" />
+								<a:tab pos="6737350" algn="l" />
+								<a:tab pos="7186613" algn="l" />
+								<a:tab pos="7635875" algn="l" />
+								<a:tab pos="8085138" algn="l" />
+								<a:tab pos="8534400" algn="l" />
+								<a:tab pos="8983663" algn="l" />
+							</a:tabLst>
+						</a:pPr>
+						<a:r>
+							<a:rPr lang="en-GB" sz="1000" b="1">
+								<a:solidFill>
+									<a:srgbClr val="000000" />
+								</a:solidFill>
+								<a:latin typeface="Verdana" pitchFamily="32" charset="0" />
+							</a:rPr>
+							<a:t>Corso di Laurea in Informatica a.a. 2006/2007</a:t>
+						</a:r>
+					</a:p>
+				</p:txBody>
+			</p:sp>
+			<p:sp>
+				<p:nvSpPr>
+					<p:cNvPr id="91139" name="Text Box 2" />
+					<p:cNvSpPr txBox="1">
+						<a:spLocks noChangeArrowheads="1" />
+					</p:cNvSpPr>
+					<p:nvPr />
+				</p:nvSpPr>
+				<p:spPr bwMode="auto">
+					<a:xfrm>
+						<a:off x="5508625" y="6453188" />
+						<a:ext cx="1225550" cy="287337" />
+					</a:xfrm>
+					<a:prstGeom prst="rect">
+						<a:avLst />
+					</a:prstGeom>
+					<a:noFill />
+					<a:ln w="9525">
+						<a:noFill />
+						<a:round />
+						<a:headEnd />
+						<a:tailEnd />
+					</a:ln>
+				</p:spPr>
+				<p:txBody>
+					<a:bodyPr lIns="90000" tIns="46800" rIns="90000" bIns="46800" />
+					<a:lstStyle />
+					<a:p>
+						<a:pPr algn="r">
+							<a:lnSpc>
+								<a:spcPct val="100000" />
+							</a:lnSpc>
+							<a:spcBef>
+								<a:spcPct val="0" />
+							</a:spcBef>
+							<a:buFont typeface="Verdana" pitchFamily="32" charset="0" />
+							<a:buNone />
+							<a:tabLst>
+								<a:tab pos="0" algn="l" />
+								<a:tab pos="447675" algn="l" />
+								<a:tab pos="896938" algn="l" />
+								<a:tab pos="1346200" algn="l" />
+								<a:tab pos="1795463" algn="l" />
+								<a:tab pos="2244725" algn="l" />
+								<a:tab pos="2693988" algn="l" />
+								<a:tab pos="3143250" algn="l" />
+								<a:tab pos="3592513" algn="l" />
+								<a:tab pos="4041775" algn="l" />
+								<a:tab pos="4491038" algn="l" />
+								<a:tab pos="4940300" algn="l" />
+								<a:tab pos="5389563" algn="l" />
+								<a:tab pos="5838825" algn="l" />
+								<a:tab pos="6288088" algn="l" />
+								<a:tab pos="6737350" algn="l" />
+								<a:tab pos="7186613" algn="l" />
+								<a:tab pos="7635875" algn="l" />
+								<a:tab pos="8085138" algn="l" />
+								<a:tab pos="8534400" algn="l" />
+								<a:tab pos="8983663" algn="l" />
+							</a:tabLst>
+						</a:pPr>
+						<a:r>
+							<a:rPr lang="en-GB" sz="800" b="1">
+								<a:solidFill>
+									<a:srgbClr val="000000" />
+								</a:solidFill>
+								<a:latin typeface="Verdana" pitchFamily="32" charset="0" />
+							</a:rPr>
+							<a:t>12/10/07</a:t>
+						</a:r>
+					</a:p>
+				</p:txBody>
+			</p:sp>
+			<p:sp>
+				<p:nvSpPr>
+					<p:cNvPr id="77827" name="Text Box 3" />
+					<p:cNvSpPr txBox="1">
+						<a:spLocks noChangeArrowheads="1" />
+					</p:cNvSpPr>
+					<p:nvPr />
+				</p:nvSpPr>
+				<p:spPr bwMode="auto">
+					<a:xfrm>
+						<a:off x="684213" y="1268413" />
+						<a:ext cx="7772400" cy="1471612" />
+					</a:xfrm>
+					<a:prstGeom prst="rect">
+						<a:avLst />
+					</a:prstGeom>
+					<a:noFill />
+					<a:ln w="9525">
+						<a:noFill />
+						<a:round />
+						<a:headEnd />
+						<a:tailEnd />
+					</a:ln>
+					<a:effectLst />
+				</p:spPr>
+				<p:txBody>
+					<a:bodyPr anchor="ctr" />
+					<a:lstStyle />
+					<a:p>
+						<a:pPr algn="ctr">
+							<a:lnSpc>
+								<a:spcPct val="100000" />
+							</a:lnSpc>
+							<a:spcBef>
+								<a:spcPct val="0" />
+							</a:spcBef>
+							<a:buClr>
+								<a:srgbClr val="000066" />
+							</a:buClr>
+							<a:buFont typeface="Verdana" pitchFamily="32" charset="0" />
+							<a:buNone />
+							<a:tabLst>
+								<a:tab pos="0" algn="l" />
+								<a:tab pos="447675" algn="l" />
+								<a:tab pos="896938" algn="l" />
+								<a:tab pos="1346200" algn="l" />
+								<a:tab pos="1795463" algn="l" />
+								<a:tab pos="2244725" algn="l" />
+								<a:tab pos="2693988" algn="l" />
+								<a:tab pos="3143250" algn="l" />
+								<a:tab pos="3592513" algn="l" />
+								<a:tab pos="4041775" algn="l" />
+								<a:tab pos="4491038" algn="l" />
+								<a:tab pos="4940300" algn="l" />
+								<a:tab pos="5389563" algn="l" />
+								<a:tab pos="5838825" algn="l" />
+								<a:tab pos="6288088" algn="l" />
+								<a:tab pos="6737350" algn="l" />
+								<a:tab pos="7186613" algn="l" />
+								<a:tab pos="7635875" algn="l" />
+								<a:tab pos="8085138" algn="l" />
+								<a:tab pos="8534400" algn="l" />
+								<a:tab pos="8983663" algn="l" />
+							</a:tabLst>
+							<a:defRPr />
+						</a:pPr>
+						<a:r>
+							<a:rPr lang="en-GB" sz="3200" b="1">
+								<a:solidFill>
+									<a:srgbClr val="000066" />
+								</a:solidFill>
+								<a:effectLst>
+									<a:outerShdw blurRad="38100" dist="38100" dir="2700000"
+										algn="tl">
+										<a:srgbClr val="C0C0C0" />
+									</a:outerShdw>
+								</a:effectLst>
+								<a:latin typeface="Verdana" pitchFamily="32" charset="0" />
+								<a:ea typeface="+mn-ea" />
+							</a:rPr>
+							<a:t>Identificatori e tipi di dati</a:t>
+						</a:r>
+					</a:p>
+				</p:txBody>
+			</p:sp>
+		</p:spTree>
+	</p:cSld>
+	<p:clrMapOvr>
+		<a:masterClrMapping />
+	</p:clrMapOvr>
+	<p:transition spd="med" />
+	<p:timing>
+		<p:tnLst>
+			<p:par>
+				<p:cTn id="1" dur="indefinite" restart="never" nodeType="tmRoot">
+					<p:childTnLst>
+						<p:seq concurrent="1" nextAc="seek">
+							<p:cTn id="2" dur="indefinite" nodeType="mainSeq" />
+							<p:prevCondLst>
+								<p:cond evt="onPrev" delay="0">
+									<p:tgtEl>
+										<p:sldTgt />
+									</p:tgtEl>
+								</p:cond>
+							</p:prevCondLst>
+							<p:nextCondLst>
+								<p:cond evt="onNext" delay="0">
+									<p:tgtEl>
+										<p:sldTgt />
+									</p:tgtEl>
+								</p:cond>
+							</p:nextCondLst>
+						</p:seq>
+					</p:childTnLst>
+				</p:cTn>
+			</p:par>
+		</p:tnLst>
+	</p:timing>
+</p:sld>
