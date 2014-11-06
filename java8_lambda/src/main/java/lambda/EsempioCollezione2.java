@@ -30,7 +30,7 @@ public class EsempioCollezione2 {
 		*/
 		
 		nomi.stream()
-		.
+		
 		.forEach(System.out::println);
 		
 	}
