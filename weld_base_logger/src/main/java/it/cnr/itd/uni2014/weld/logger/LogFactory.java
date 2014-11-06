@@ -9,9 +9,21 @@ import javax.enterprise.inject.spi.InjectionPoint;
 
 @ApplicationScoped
 public class LogFactory {
+	
+	
 	@Produces
 	Logger createLogger(InjectionPoint injectionPoint) {
-		return Logger.getLogger(injectionPoint.getMember().getDeclaringClass()
-				.getName());
+		return Logger.getLogger(
+				
+				injectionPoint.getMember().getDeclaringClass().getName()
+				
+				);
 	}
+	
+	/*
+	@Produces
+	Logger createLog()
+	{
+		return Logger.getAnonymousLogger();
+	}*/
 }

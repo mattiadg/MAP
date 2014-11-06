@@ -13,7 +13,12 @@ public class Example_06_map_reduce_2 {
 			double price = cost + .12 * cost;
 			total = total + price;
 		}
-		System.out.println("Total : " + total); // New way:
+		System.out.println("Total : " + total); 
+		
+		// New way:
+		
+		
+		
 		double bill = costBeforeTax.stream().map((cost) -> cost + .12 * cost)
 				.reduce((sum, cost) -> sum + cost).get();
 		System.out.println("Total : " + bill);

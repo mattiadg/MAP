@@ -14,9 +14,14 @@ public class Example {
 		try {
 			Context ctxt = new InitialContext();
 			try {
-				List<String> list = (List<String>) ctxt.lookup("ciao/item");
-				System.out.println("Items are: " + list);
+				//List<String> list = (List<String>) ctxt.lookup("ciao/item");
+				//System.out.println("Items are: " + list);
+				
 				ctxt.bind("servizio", new CalcolatoreServiceImpl2());
+				
+				
+				
+				
 				CalcolatoreService service = (CalcolatoreService) ctxt
 						.lookup("servizio");
 				System.out.println(service.calculate(2, 3));
