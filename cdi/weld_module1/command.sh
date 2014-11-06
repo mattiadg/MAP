@@ -1,0 +1,1 @@
+java -classpath ./lib/*:weld_module1-0.0.1-SNAPSHOT.jar org.jboss.weld.environment.se.StartMain
