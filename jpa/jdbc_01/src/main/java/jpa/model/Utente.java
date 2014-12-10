@@ -2,6 +2,7 @@ package jpa.model;
 
 import java.util.List;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +17,7 @@ public class Utente {
 	private int idUtente;
 	private String nome;
 	private Ruolo ruolo;
-	private List<Telefono> numeri;
+	private List<String> numeri;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -45,12 +46,13 @@ public class Utente {
 		this.ruolo = ruolo;
 	}
 
-	@OneToMany(mappedBy = "utente")
-	public List<Telefono> getNumeri() {
+	
+	@ElementCollection
+	public List<String> getNumeri() {
 		return numeri;
 	}
 
-	public void setNumeri(List<Telefono> numeri) {
+	public void setNumeri(List<String> numeri) {
 		this.numeri = numeri;
 	}
 
