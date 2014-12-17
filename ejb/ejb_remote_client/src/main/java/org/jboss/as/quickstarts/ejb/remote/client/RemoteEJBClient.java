@@ -1,6 +1,7 @@
 package org.jboss.as.quickstarts.ejb.remote.client;
 
 import java.util.Hashtable;
+import java.util.Properties;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -8,16 +9,14 @@ import javax.naming.NamingException;
 
 import org.jboss.as.quickstarts.ejb.remote.stateful.RemoteCounter;
 import org.jboss.as.quickstarts.ejb.remote.stateless.RemoteCalculator;
-
+import org.jboss.ejb.client.EJBClientContext;
+import org.jboss.ejb.client.PropertiesBasedEJBClientConfiguration;
+import org.jboss.ejb.client.remoting.ConfigBasedEJBClientContextSelector;
 
 public class RemoteEJBClient {
-
 	public static void main(String[] args) throws Exception {
-		// Invoke a stateless bean
 		invokeStatelessBean();
-
-		// Invoke a stateful bean
-		//invokeStatefulBean();
+		invokeStatefulBean();
 	}
 
 	/**
@@ -26,7 +25,6 @@ public class RemoteEJBClient {
 	 * @throws NamingException
 	 */
 	private static void invokeStatelessBean() throws NamingException {
-		// Let's lookup the remote stateless calculator
 		final RemoteCalculator statelessRemoteCalculator = lookupRemoteStatelessCalculator();
 		System.out
 				.println("Obtained a remote stateless calculator for invocation");
@@ -104,11 +102,13 @@ public class RemoteEJBClient {
 	 */
 	private static RemoteCalculator lookupRemoteStatelessCalculator()
 			throws NamingException {
-		final Hashtable jndiProperties = new Hashtable();
-		jndiProperties.put(Context.URL_PKG_PREFIXES,
-				"org.jboss.ejb.client.naming");
-		final Context context = new InitialContext(jndiProperties);
-
+		Context context = getContext();
+		/*
+		 * final Hashtable jndiProperties = new Hashtable();
+		 * jndiProperties.put(Context.URL_PKG_PREFIXES,
+		 * "org.jboss.ejb.client.naming"); final Context context = new
+		 * InitialContext(jndiProperties);
+		 */
 		// The JNDI lookup name for a stateless session bean has the syntax of:
 		// ejb:<appName>/<moduleName>/<distinctName>/<beanName>!<viewClassName>
 		//
@@ -132,11 +132,23 @@ public class RemoteEJBClient {
 		// <viewClassName>: The fully qualified classname of the remote
 		// interface. Must include
 		// the whole package name.
-
 		// let's do the lookup
 		return (RemoteCalculator) context
-				.lookup("java:jboss/exported/ejb_remote_server/CalculatorBean!"
+				.lookup("ejb:/ejb_remote_server/CalculatorBean!"
 						+ RemoteCalculator.class.getName());
+	}
+
+	private static Context getContext() throws NamingException {
+		Properties jndiProperties = new Properties();
+		jndiProperties.put(Context.URL_PKG_PREFIXES,
+				"org.jboss.ejb.client.naming");
+		jndiProperties.put(Context.INITIAL_CONTEXT_FACTORY,
+				"org.jboss.naming.remote.client.InitialContextFactory");
+		jndiProperties.put(Context.PROVIDER_URL,
+				"http-remoting://localhost:8080");
+		// try {
+		Context context = new InitialContext(jndiProperties);
+		return context;
 	}
 
 	/**
@@ -147,38 +159,9 @@ public class RemoteEJBClient {
 	 */
 	private static RemoteCounter lookupRemoteStatefulCounter()
 			throws NamingException {
-		final Hashtable jndiProperties = new Hashtable();
-		jndiProperties.put(Context.URL_PKG_PREFIXES,
-				"org.jboss.ejb.client.naming");
-		final Context context = new InitialContext(jndiProperties);
-
-		// The JNDI lookup name for a stateful session bean has the syntax of:
-		// ejb:<appName>/<moduleName>/<distinctName>/<beanName>!<viewClassName>?stateful
-		//
-		// <appName> The application name is the name of the EAR that the EJB is
-		// deployed in
-		// (without the .ear). If the EJB JAR is not deployed in an EAR then
-		// this is
-		// blank. The app name can also be specified in the EAR's
-		// application.xml
-		//
-		// <moduleName> By the default the module name is the name of the EJB
-		// JAR file (without the
-		// .jar suffix). The module name might be overridden in the ejb-jar.xml
-		//
-		// <distinctName> : WildFly allows each deployment to have an (optional)
-		// distinct name.
-		// This example does not use this so leave it blank.
-		//
-		// <beanName> : The name of the session been to be invoked.
-		//
-		// <viewClassName>: The fully qualified classname of the remote
-		// interface. Must include
-		// the whole package name.
-
-		// let's do the lookup
+		Context context = getContext();
 		return (RemoteCounter) context
-				.lookup("java:jboss/exported/ejb_remote_server/CounterBean!"
+				.lookup("ejb:/ejb_remote_server/CounterBean!"
 						+ RemoteCounter.class.getName() + "?stateful");
 	}
 }
