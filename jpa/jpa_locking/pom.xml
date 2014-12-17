@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.cnr.itd.uni2014.db</groupId>
-	<artifactId>jpa_locking</artifactId>
+	<artifactId>jpa_esercizio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 
