@@ -1,10 +1,13 @@
 package commerce.model;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Utente {
+	private int id;
 	private String username;
 	private String password;
 	private String nome;
@@ -21,6 +24,17 @@ public class Utente {
 		super();
 		this.username = username;
 		this.password = password;
+	}
+	
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getUsername() {
@@ -39,8 +53,6 @@ public class Utente {
 		this.password = password;
 	}
 
-	@NotNull
-	@Size(min=4)
 	public String getNome() {
 		return nome;
 	}
@@ -73,8 +85,6 @@ public class Utente {
 		this.telefono = telefono;
 	}
 	
-	
-	@Min(14)
 	public int getEta() {
 		return eta;
 	}

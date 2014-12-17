@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.OptimisticLockException;
 import javax.persistence.Persistence;
 
 import jpa.model.Utente;
@@ -41,10 +42,16 @@ public class Main {
 				break;
 			case 3:
 				if (utenteCorrente != null) {
-					entityManager.getTransaction().begin();
-					nuovoNome = s.next();
-					utenteCorrente.setNome(nuovoNome);
-					entityManager.getTransaction().commit();
+					try {
+						entityManager.getTransaction().begin();
+						nuovoNome = s.next();
+						utenteCorrente.setNome(nuovoNome);
+						entityManager.getTransaction().commit();
+					} catch (OptimisticLockException e) {
+						
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				} else
 					System.out.println("Nessun utente in memoria");
 				break;

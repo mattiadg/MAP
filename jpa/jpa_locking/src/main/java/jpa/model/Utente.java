@@ -16,7 +16,6 @@ public class Utente {
 	private int idUtente;
 	private String nome;
 	private List<String> numeri;
-	
 	private Long version;
 
 	@Id
@@ -45,6 +44,7 @@ public class Utente {
 	public void setNumeri(List<String> numeri) {
 		this.numeri = numeri;
 	}
+
 	@Version
 	public Long getVersion() {
 		return version;
@@ -60,5 +60,4 @@ public class Utente {
 				+ numeri + ", version=" + version + "]";
 	}
 
-	
 }
