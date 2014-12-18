@@ -40,6 +40,11 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>it.cnr.itd.uni2014.ejb</groupId>
+			<artifactId>ejb_remote_interfaces</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
