@@ -9,5 +9,6 @@
 		<module>ejb_remote_client</module>
 		<module>ejb_remote_interfaces</module>
 		<module>ejb_remote_server</module>
+		<module>ejb_remote_ear</module>
 	</modules>
 </project>
