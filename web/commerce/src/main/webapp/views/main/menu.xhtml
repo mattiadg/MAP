@@ -13,5 +13,12 @@
 		<h:link outcome="showArticoli" rendered="#{loginController.logged}">
 			<h:outputText value="#{msg.personAllLabel}" />
 		</h:link>
+		
+		<h:link outcome="addOrdine" rendered="#{loginController.logged}">
+			<h:outputText value="#{msg.personAddLabel}" />
+		</h:link>
+		<h:link outcome="showOrdini" rendered="#{loginController.logged}">
+			<h:outputText value="#{msg.personAllLabel}" />
+		</h:link>
 	</h:panelGrid>
 </ui:composition>

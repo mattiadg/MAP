@@ -23,7 +23,6 @@ public class ArticoloManagerJPA implements ArticoloManager, Serializable {
 	@Override
 	public void addArticolo(Articolo articolo) {
 		em.persist(articolo);
-		
 	}
 
 	@Override
@@ -31,5 +30,8 @@ public class ArticoloManagerJPA implements ArticoloManager, Serializable {
 		em.remove(articolo);
 	}
 
-	
+	@Override
+	public Articolo get(Integer valueOf) {
+		return em.find(Articolo.class, valueOf);
+	}
 }

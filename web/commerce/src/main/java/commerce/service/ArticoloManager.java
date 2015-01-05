@@ -10,4 +10,6 @@ public interface ArticoloManager {
 	public void addArticolo(Articolo articolo);
 
 	public void deleteArticolo(Articolo personToDelete);
+
+	public Articolo get(Integer valueOf);
 }
