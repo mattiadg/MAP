@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml">
+	<ui:define name="content">
+
+		<f:event type="preRenderView" listener="#{login.checkLoggedIn}"/>
+		
+		<h:panelGrid columns="2" rendered="#{login.loggedIn}">
+			<h:outputLabel for="username">Username:</h:outputLabel>
+			<h:outputText id="username" value="#{login.currentUser.username}" />
+			<h:outputLabel for="name">Name:</h:outputLabel>
+			<h:outputText id="name" value="#{login.currentUser.name}" />
+			<h:outputLabel for="phone">Telefono:</h:outputLabel>
+			<h:outputText id="phone" value="#{login.currentUser.telefono}" />
+			<h:outputLabel for="email">Email:</h:outputLabel>
+			<h:outputText id="email" value="#{login.currentUser.email}" />
+			<h:outputLabel for="eta">Età:</h:outputLabel>
+			<h:outputText id="eta" value="#{login.currentUser.eta}" />
+			
+			<h:outputLabel for="ruolo">Ruolo:</h:outputLabel>
+			<h:outputText id="ruolo" value="#{login.currentUser.ruolo.nome}" />
+			
+		</h:panelGrid>
+		<h:link value="Modifica" outcome="editUser"/>
+
+
+
+
+	</ui:define>
+</ui:composition>
