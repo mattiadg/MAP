@@ -5,11 +5,22 @@
         http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
 	version="2.2">
 
+
 	<application>
+		<resource-bundle>
+			<base-name>it.cnr.itd.uni2014.commerce.messages</base-name>
+			<var>msg</var>
+		</resource-bundle>
+
+		<message-bundle>it.cnr.itd.uni2014.commerce.errormessages</message-bundle>
+
 		<locale-config>
-			<default-locale>en</default-locale>
+			<default-locale>it</default-locale>
+			<supported-locale>it</supported-locale>
 			<supported-locale>en</supported-locale>
 		</locale-config>
+
 	</application>
+
 
 </faces-config>

@@ -39,7 +39,7 @@ public class EmailValidator implements Validator {
 		
 		
 		if (!matcher.matches()) {
-			FacesMessage msg = new FacesMessage("Errore nella data",
+			FacesMessage msg = new FacesMessage("Errore nella mail",
 					"Please provide E-mail address in this format: abcd@abc.com");
 			msg.setSeverity(FacesMessage.SEVERITY_ERROR);
 

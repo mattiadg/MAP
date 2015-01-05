@@ -87,7 +87,6 @@ public class Utente {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-	@Min(15)
 	public int getEta() {
 		return eta;
 	}

@@ -1,36 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml">
+	<ui:define name="content">
 
-<h:head>
-	<title>JSF 2.0 Hello World</title>
-</h:head>
-<h:body bgcolor="white">
-	<h1>Ciao</h1>
-	
-	<h:panelGrid columns="2">
-		<h:outputLabel value="Username:" />
-		<h:outputText value="#{loginController.utenteCorrente.username}" />
-		<h:outputLabel value="Nome:" />
-		<h:outputText value="#{loginController.utenteCorrente.nome}" />
-		<h:outputLabel value="Cognome:" />
-		<h:outputText value="#{loginController.utenteCorrente.cognome}" />
-		<h:outputLabel value="Email:" />
-		<h:outputText value="#{loginController.utenteCorrente.email}" />
-		<h:outputLabel value="Telefono:" />
-		<h:outputText value="#{loginController.utenteCorrente.telefono}" />
-		<h:outputLabel value="Eta:" />
-		<h:outputText value="#{loginController.utenteCorrente.eta}" />
-			
-	</h:panelGrid>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Username:" />
+			<h:outputText value="#{loginController.utenteCorrente.username}" />
+			<h:outputLabel value="Nome:" />
+			<h:outputText value="#{loginController.utenteCorrente.nome}" />
+			<h:outputLabel value="Cognome:" />
+			<h:outputText value="#{loginController.utenteCorrente.cognome}" />
+			<h:outputLabel value="Email:" />
+			<h:outputText value="#{loginController.utenteCorrente.email}" />
+			<h:outputLabel value="Telefono:" />
+			<h:outputText value="#{loginController.utenteCorrente.telefono}" />
+			<h:outputLabel value="Eta:" />
+			<h:outputText value="#{loginController.utenteCorrente.eta}" />
+			<h:link value="Modifica" outcome="editUser" />
+			<h:link value="Annulla" outcome="welcome" />
+		</h:panelGrid>
 
-	<h:link value="Modifica dati" outcome="editUser" />
-				
+	</ui:define>
 
-
-
-</h:body>
-</html>
+</ui:composition>
