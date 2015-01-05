@@ -4,8 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
+@XmlRootElement
 public class Utente {
 	private int id;
 	private String username;
@@ -84,7 +87,7 @@ public class Utente {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-	
+	@Min(15)
 	public int getEta() {
 		return eta;
 	}

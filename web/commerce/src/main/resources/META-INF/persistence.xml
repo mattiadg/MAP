@@ -5,7 +5,7 @@
 
 	<persistence-unit name="pu01">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-		<jta-data-source>java:jboss/datasources/commerce</jta-data-source> 
+		<jta-data-source>java:jboss/datasources/miao</jta-data-source> 
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
 			<property name="hibernate.show_sql" value="true" />
