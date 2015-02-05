@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="1.0">
+  <persistence-unit name="myPU">
+    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+    <jta-data-source>java:openejb/Resource/provaDBDerby2</jta-data-source>
+    <properties>
+		<property name="openjpa.jdbc.SynchronizeMappings"  value="buildSchema(ForeignKeys=true,SchemaAction='refresh')"/>
+		 
+    </properties>
+  </persistence-unit>
+</persistence>

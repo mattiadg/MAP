@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml">
+
+	<ui:define name="content">
+
+		<h:form>
+
+			<h:dataTable value="#{ordineController.all}" var="item">
+				<f:facet name="header">#{msg.ordineAllLabel}</f:facet>
+
+				<h:column>
+					<f:facet name="header">#{msg.ordineDataLabel}</f:facet>
+        #{item.nome}
+      </h:column>
+
+				<h:dataTable value="#{item.righe}" var="riga">
+					<f:facet name="header">#{msg.righeLabel}</f:facet>
+
+					<h:column>
+						<f:facet name="header">#{msg.articoloNomeLabel}</f:facet>
+        #{riga.articolo.nome}
+      </h:column>
+
+					<h:column>
+						<f:facet name="header">#{msg.articoloPrezzoLabel}</f:facet>
+        #{riga.articolo.prezzo}
+      </h:column>
+
+					<h:column>
+						<f:facet name="header">#{msg.qauntitaLabel}</f:facet>
+        #{riga.quantita}
+      </h:column>
+
+				</h:dataTable>
+
+
+
+				<h:column>
+					<f:facet name="header">#{msg.action}</f:facet>
+					<h:commandLink value="#{msg.actionDelete}"
+						action="#{ordineController.delete}" />
+				</h:column>
+
+			</h:dataTable>
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

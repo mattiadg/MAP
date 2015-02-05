@@ -6,11 +6,13 @@ import java.util.Map;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Alternative;
 
 import commerce.model.Utente;
 import commerce.service.UserManager;
 
 @ApplicationScoped
+@Alternative
 public class UserManagerHashTable implements UserManager,Serializable {
 	Map<String,Utente> utenti=new HashMap<>();
 	
@@ -32,6 +34,12 @@ public class UserManagerHashTable implements UserManager,Serializable {
 	@Override
 	public void update(Utente utente) {
 		utenti.put(utente.getUsername(), utente);
+		
+	}
+
+	@Override
+	public void popola2() {
+		// TODO Auto-generated method stub
 		
 	}
 

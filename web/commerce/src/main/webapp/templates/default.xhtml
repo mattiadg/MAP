@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title><ui:insert name="windowTitle">#{msg.mainWindowTitle}</ui:insert>
+	</title>
+</h:head>
+<h:body>
+	<h:outputStylesheet library="css" name="default.css" target="body" />
+	<div class="heading">
+		<ui:insert name="heading">
+       #{msg.mainHeading}
+     </ui:insert>
+	</div>
+	<div class="menuAndContent">
+		<div class="menu">
+			<ui:insert name="menu">
+
+				<h:form rendered="#{!loginController.logged}">
+					<h:panelGrid columns="1">
+						<h:outputLabel value="Username:" />
+						<h:inputText value="#{credenziali.username}" />
+						<h:outputLabel value="Password:" />
+						<h:inputSecret value="#{credenziali.password}" />
+						<h:commandButton value="Login" action="#{loginController.login}" />
+						
+						<h:commandButton value="Inserisci"
+						action="#{loginController.inserisci}" />
+					</h:panelGrid>
+				</h:form>
+				<h:form>
+					<h:commandButton rendered="#{loginController.logged}"
+						value="Logout" action="#{loginController.logout}" />
+
+					
+				</h:form>
+				<h:outputText rendered="#{loginController.logged}">Benvenuto #{loginController.utenteCorrente.username}</h:outputText>
+				<br />
+				<h:link rendered="#{loginController.logged}" value="Visualizza dati"
+					outcome="viewUser" />
+
+				<ui:include src="/views/main/menu.xhtml" />
+			</ui:insert>
+		</div>
+		<div class="content">
+			<h:messages />
+			<ui:insert name="content" />
+		</div>
+	</div>
+</h:body>
+</html>

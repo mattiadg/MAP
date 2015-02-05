@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml">
+	<ui:define name="content">
+
+		<f:event type="preRenderView" listener="#{login.checkLoggedIn}" />
+		<h:form id="utenteform">
+			<h:panelGrid columns="2" rendered="#{login.loggedIn}">
+				<h:outputLabel for="username">Username:</h:outputLabel>
+				<h:inputText id="username" value="#{login.currentUser.username}" />
+				<h:outputLabel for="name">Name:</h:outputLabel>
+				<h:inputText id="name" value="#{login.currentUser.name}" />
+				<h:outputLabel for="phone">Telefono:</h:outputLabel>
+				<h:inputText id="phone" value="#{login.currentUser.telefono}">
+					<f:validateRegex pattern="\d{12}" />
+
+				</h:inputText>
+				<h:outputLabel for="email">Email:</h:outputLabel>
+				<h:inputText id="email" value="#{login.currentUser.email}">
+					<f:validator validatorId="emailValidator" />
+				</h:inputText>
+				<h:outputLabel for="eta">Età:</h:outputLabel>
+				<h:inputText id="eta" value="#{login.currentUser.eta}">
+					<f:ajax execute="@this" render="messages" />
+				</h:inputText>
+
+				<h:outputLabel for="ruolo">Ruolo:</h:outputLabel>
+				<h:selectOneMenu id="ruolo" value="#{login.currentUser.ruolo}" converter="#{ruoloConverter}">
+
+					<f:selectItems value="#{ruoli.all}"
+						var="ruolo" itemLabel="#{ruolo.nome}"
+						itemValue="#{ruolo}" />
+				</h:selectOneMenu>
+
+
+			</h:panelGrid>
+			<h:commandButton value="Aggiorna" action="#{login.aggiornaDati}"></h:commandButton>
+		</h:form>
+		<h:panelGrid>
+			<h:messages id="messages" showDetail="#{true}" showSummary="#{false}" />
+		</h:panelGrid>
+
+
+
+
+	</ui:define>
+</ui:composition>

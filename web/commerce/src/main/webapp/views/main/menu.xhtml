@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	<h:panelGrid columns="1">
+		<h:link outcome="home?faces-redirect=true">
+			<h:outputText value="#{msg.linkHome}" />
+		</h:link>
+		<h:link outcome="addArticolo" rendered="#{loginController.logged}">
+			<h:outputText value="#{msg.personAddLabel}" />
+		</h:link>
+		<h:link outcome="showArticoli" rendered="#{loginController.logged}">
+			<h:outputText value="#{msg.personAllLabel}" />
+		</h:link>
+		
+		<h:link outcome="addOrdine" rendered="#{loginController.logged}">
+			<h:outputText value="#{msg.personAddLabel}" />
+		</h:link>
+		<h:link outcome="showOrdini" rendered="#{loginController.logged}">
+			<h:outputText value="#{msg.personAllLabel}" />
+		</h:link>
+	</h:panelGrid>
+</ui:composition>

@@ -49,4 +49,9 @@ public class LoginController implements Serializable {
 		return "viewUser";
 	}
 	
+	public void inserisci()
+	{
+		manager.popola2();
+	}
+	
 }
